@@ -61,7 +61,7 @@ const Main = () => {
             </div>
 
             {/* Tables */}
-            <div className='flex flex-row justify-between items-center gap-x-5'>
+            <div className='flex flex-row justify-between items-start  gap-x-5'>
                 <OverallSummary />
                 <MyRecentDesigns />
             </div>
