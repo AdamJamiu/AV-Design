@@ -30,7 +30,7 @@ const RecentProjects = () => {
                 <p className='font-bold text-[#242424] text-[18px]'>My Recent Projects</p>
             </div>
 
-            <div className='bg-white h-fullx'>
+            <div className='bg-white h-[100%]'>
                 <table className='w-full'>
                     <tr className='border-bottom border'>
                         <td className='text-[#242424] text-[14px] py-3 px-5'>Project Name</td>

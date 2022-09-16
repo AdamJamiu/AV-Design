@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="grid-container">
 
-        <div className='sidenav w-[300px] h-full rounded left-0 top-0  flex flex-col items-center bgBlack'>
+        <div className='sidenav w-[250px] rounded  flex flex-col items-center bgBlack'>
           <SideNav />
         </div>
 

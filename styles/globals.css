@@ -52,9 +52,13 @@ hr {
 
 .grid-container {
   display: flex;
-  /* flex-direction: row; */
-  /* justify-content: c; */
-  /* align-items: stretch; */
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: flex-start;
+}
+
+.menu-header {
+  border-bottom: 1px solid #242424;
 }
 
 .main {
@@ -77,6 +81,14 @@ hr {
 
 .hamburger {
   display: none;
+}
+
+.donutchart-legend {
+  background-color: red !important;
+}
+
+g .donutchart-legend-item-label {
+  padding: 3em 0 !important;
 }
 
 @media only screen and (max-width: 1090px) {
