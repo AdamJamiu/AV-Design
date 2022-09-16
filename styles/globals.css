@@ -1,0 +1,86 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* sidnav background color */
+
+.bgBlack {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #161616;
+}
+
+hr {
+  height: 3px;
+  background-color: inherit;
+  border: none;
+  width: inherit;
+  margin: auto;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+
+.item7 {
+  grid-area: item7;
+}
+
+.grid-container {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: c; */
+  /* align-items: stretch; */
+}
+
+.main {
+  padding: 2em 1em;
+  height: 100vh;
+  width: 100%;
+  background-color: #e8e8e8;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "ad ad"
+    "sidenav main"
+    "footer footer";
+  gap: 10px;
+  padding-top: 2em;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 1090px) {
+  .hamburger {
+    display: block;
+  }
+}
