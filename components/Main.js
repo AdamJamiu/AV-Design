@@ -10,6 +10,8 @@ import Group28 from "../public/assets/images/Group 28.png";
 import Group42 from "../public/assets/images/Group 42.png";
 import OverallSummary from './elements/Tables/OverallSum';
 import MyRecentDesigns from './elements/Tables/MyRecentDes';
+import RecentProjects from './elements/Tables/RecentProject';
+import RecentProposals from './elements/Tables/RecentProposals';
 
 
 const Main = () => {
@@ -65,6 +67,13 @@ const Main = () => {
                 <OverallSummary />
                 <MyRecentDesigns />
             </div>
+
+            {/* second line table */}
+            <div className='flex flex-row justify-stretch items-stretch gap-x-5 mt-10'>
+                <RecentProjects />
+                <RecentProposals />
+            </div>
+
         </>
     )
 }
