@@ -5,7 +5,7 @@ import filter from "../../../public/assets/images/filter.svg";
 
 const OverallSummary = () => {
     return (
-        <div className='flex-1 shadow-4xl'>
+        <div className='flex-1 w-[100%] shadow-4xl'>
             <div className='flex flex-row justify-between bg-[#E1E1E1] shadow-4xl p-5'>
                 <p className='font-bold text-[18px] text-[#242424]'>Overall Summary</p>
 

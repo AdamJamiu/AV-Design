@@ -9,6 +9,7 @@ import {
     TextField,
     InputAdornment,
     Badge,
+    Drawer,
     Divider,
 
 } from '@mui/material';
@@ -20,6 +21,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import ResponsiveSidebar from "./AppBar";
 
 
 const theme = createTheme({
@@ -32,7 +34,7 @@ const theme = createTheme({
         }
     },
 })
-const Navbar = () => {
+const Navbar = ({ setIsResponsive }) => {
 
     const [searchValue, setSearchValue] = React.useState("")
 
@@ -64,12 +66,33 @@ const Navbar = () => {
         setAnchorEl(null);
     };
 
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
+
+    // const container = window !== undefined ? () => window().document.body : undefined;
+
     return (
         <ThemeProvider theme={theme}>
 
             <div className='flex flex-row justify-between w-[100%] items-center gap-x-4'>
 
-                <i className="fa-solid cursor-pointer fa-bars block desktop:hidden"></i>
+                <i className="fa-solid cursor-pointer fa-bars block desktop:hidden" onClick={handleDrawerToggle}></i>
+                <Drawer
+                
+                    variant="temporary"
+                    open={mobileOpen}
+                    anchor="left"
+                    onClose={handleDrawerToggle}
+                >
+                    <div onClick={handleDrawerToggle}>
+
+                    <ResponsiveSidebar />
+                    </div>
+
+                </Drawer>
 
                 <div className='flex-1'>
 

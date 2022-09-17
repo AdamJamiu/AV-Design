@@ -36,7 +36,6 @@ hr {
   border-bottom: 1px solid #242424;
 }
 
-
 .main-grid {
   display: grid;
   grid-template-areas:
@@ -65,3 +64,16 @@ g .donutchart-legend-item-label {
     display: block;
   }
 }
+
+@media (max-width: 1024px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+/* @media (max-width: 400px) {
+  .wrappper {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+} */
