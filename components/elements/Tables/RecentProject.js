@@ -39,7 +39,7 @@ const RecentProjects = () => {
                         <td className='text-[#242424] text-[14px] py-3 px-5'>Client</td>
                         <td className='text-[#242424] text-[14px] py-3 px-5'>Budget</td>
                     </tr>
-                    <tbody>
+                    
                         {datas.map((data, index) => (
                             <tr key={index} className='border border-bottom'>
                                 <td className='text-[#242424] text-[14px] py-3 px-5'>{data?.projectName}</td>
@@ -48,8 +48,8 @@ const RecentProjects = () => {
                                 <td className='text-[#242424] text-[14px] py-3 px-5'>{data?.client}</td>
                                 <td className='text-[#242424] text-[14px] py-3 px-5'>{data?.budget}</td>
                             </tr>
-                        ))}
-                    </tbody>
+                        ))}``
+                    
                 </table>
 
             </div>

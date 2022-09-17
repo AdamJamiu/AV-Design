@@ -42,7 +42,7 @@ const MyRecentDesigns = () => {
                         <td className='text-[#242424] text-[14px] py-3 px-5'>% Progress</td>
                         <td className='text-[#242424] text-[14px] py-3 px-5'>Etimate</td>
                     </tr>
-                    <tbody>
+
                         {datas.map((data, index) => (
                             <tr key={index} className=''>
                                 <td className='text-[#242424] text-[14px] py-3 px-5'>{data.designName}</td>
@@ -50,7 +50,7 @@ const MyRecentDesigns = () => {
                                 <td className='text-[#242424] text-[14px] py-3 px-5'>{data.estimate}</td>
                             </tr>
                         ))}
-                    </tbody>
+                    
                 </table>
 
             </div>
