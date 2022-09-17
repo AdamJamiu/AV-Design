@@ -1,8 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*  */
+body {
+  font-family: "Lato", sans-serif;
+}
 
 /* sidnav background color */
 
@@ -19,37 +25,6 @@ hr {
   margin: auto;
 }
 
-.navbar {
-  grid-area: navbar;
-}
-
-.sidenav {
-  grid-area: sidenav;
-}
-
-.item1 {
-  grid-area: item1;
-}
-.item2 {
-  grid-area: item2;
-}
-.item3 {
-  grid-area: item3;
-}
-.item4 {
-  grid-area: item4;
-}
-.item5 {
-  grid-area: item5;
-}
-.item6 {
-  grid-area: item6;
-}
-
-.item7 {
-  grid-area: item7;
-}
-
 .grid-container {
   display: flex;
   flex-direction: row;
@@ -61,12 +36,6 @@ hr {
   border-bottom: 1px solid #242424;
 }
 
-.main {
-  padding: 2em 1em;
-  /* height: 100%; */
-  width: 100%;
-  background-color: #e8e8e8;
-}
 
 .main-grid {
   display: grid;

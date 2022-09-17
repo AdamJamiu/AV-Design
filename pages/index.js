@@ -14,11 +14,11 @@ export default function Home() {
 
       <div className="grid-container">
 
-        <div className='sidenav w-[250px] rounded  flex flex-col items-center bgBlack'>
+        <div className=' w-[250px] h-full fixed left-0 top-0 z-10 rounded flex flex-col items-center bgBlack'>
           <SideNav />
         </div>
 
-        <div className='main'>
+        <div className='py-[2em] px-[1em] w-[100%] bg-[#E8E8E8] ml-[251px]'>
           <Navbar />
           <Main />
         </div>

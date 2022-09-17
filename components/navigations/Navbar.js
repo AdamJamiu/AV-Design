@@ -2,7 +2,6 @@ import React from "react"
 import Image from 'next/image';
 import avatar from "../../public/assets/images/avatar.svg";
 import arrow from "../../public/assets/images/arrow.svg";
-import SettingsIcon from '@mui/icons-material/Settings';
 import {
     Menu,
     ThemeProvider,
@@ -10,21 +9,17 @@ import {
     TextField,
     InputAdornment,
     Badge,
-    List,
-    ListSubheader,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
     Divider,
 
 } from '@mui/material';
 
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SearchIcon from "@mui/icons-material/Search"
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
-import GroupIcon from '@mui/icons-material/Group';
-import PersonIcon from '@mui/icons-material/Person';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 
 
 const theme = createTheme({
@@ -38,6 +33,17 @@ const theme = createTheme({
     },
 })
 const Navbar = () => {
+
+    const [searchValue, setSearchValue] = React.useState("")
+
+    const handleReset = () => {
+        setSearchValue("");
+    }
+    const handleChange = (e) => {
+        setSearchValue(e.target.value);
+    }
+
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [anchorNotification, setAnchorNotification] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -68,6 +74,8 @@ const Navbar = () => {
                 <div className='flex-1'>
 
                     <TextField
+                        value={searchValue}
+                        onChange={handleChange}
                         fullWidth
                         sx={{ background: "#fff", }}
                         InputProps={{
@@ -78,8 +86,7 @@ const Navbar = () => {
                             ),
                             endAdornment: (
                                 <InputAdornment position='end'>
-                                    {/* <SearchIcon onClick={() => alert("yes")}/> */}
-                                    <i className="text-sm fa-solid fa-x cursor-pointer"></i>
+                                    <i onClick={handleReset} className="text-sm fa-solid fa-x cursor-pointer"></i>
 
                                 </InputAdornment>
                             )
@@ -93,7 +100,7 @@ const Navbar = () => {
                         aria-haspopup="true"
                         aria-expanded={isNotify ? 'true' : undefined}
                         onClick={handleOpen}
-                        className="bg-white h-full rounded-full p-2">
+                        className="bg-white cursor-pointer h-full rounded-full p-2">
                         <Badge color="custom" badgeContent={2}>
                             <NotificationsOutlinedIcon fontSize="medium" />
                         </Badge>
@@ -113,17 +120,28 @@ const Navbar = () => {
                             }}
                             transformOrigin={{
                                 vertical: 'top',
-                                horizontal: 'center',
+                                horizontal: 'right',
                             }}
                             MenuListProps={{
                                 'aria-labelledby': 'basic-button',
                             }}
 
                         >
-                            <div onClick={closeNotfication}>
-                                <p className="mb-2">Notification</p>
-
+                            <div className="w-[290px] text-[#242424] p-3 rounded" onClick={closeNotfication}>
+                                <p className="mb-2">Notifications</p>
                                 <Divider />
+
+                                <div className="my-3 grid grid-cols-1 divide-y gap-y-3">
+                                    <p className="text-sm">
+                                        Dear Chibuzo, you have not verify your Email. Please click the link on the verification email sent to you.
+                                        <a href="#" className="text-[#1255B3]">Click here</a> to resend verification link.
+                                    </p>
+                                    <p className="text-sm pt-2">
+                                        Dear Chibuzo, you have not verify your Email. Please click the link on the verification email sent to you.
+                                        <a href="#" className="text-[#1255B3]">Click here</a> to resend verification link.
+                                    </p>
+                                </div>
+
                             </div>
                         </Menu>
                     </div>
@@ -166,34 +184,45 @@ const Navbar = () => {
 
                                 <Divider />
 
+                                {/* user card */}
+                                <div
+                                    onClick={handleClose}
+                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-center justify-start gap-x-3">
+                                    <Image src={avatar} height={50} width={40} />
+                                    <div>
+                                        <p className="">Chibuzo Michael</p>
+                                        <p className="text-sm">System Designer</p>
+                                    </div>
+                                </div>
+
                                 {/* Profile */}
                                 <div
                                     onClick={handleClose}
-                                    className="hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-start justify-start gap-x-3">
-                                    <PersonIcon />
+                                    className="hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-center justify-start gap-x-3">
+                                    <PersonOutlinedIcon />
                                     <p>Profile</p>
                                 </div>
 
                                 {/* Team Management */}
                                 <div
                                     onClick={handleClose}
-                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-start justify-start gap-x-3">
-                                    <GroupIcon />
+                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-center justify-start gap-x-3">
+                                    <GroupOutlinedIcon />
                                     <p>Team Management</p>
                                 </div>
 
                                 {/* Settings */}
                                 <div
                                     onClick={handleClose}
-                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-start justify-start gap-x-3">
-                                    <SettingsIcon />
+                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-center justify-start gap-x-3">
+                                    <SettingsOutlinedIcon />
                                     <p>Settings</p>
                                 </div>
 
                                 {/* Help */}
                                 <div
                                     onClick={handleClose}
-                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-start justify-start gap-x-3">
+                                    className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-center justify-start gap-x-3">
                                     <HelpOutlineIcon />
                                     <p>Need help?</p>
                                 </div>

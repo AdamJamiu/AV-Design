@@ -17,7 +17,7 @@ const datas = [
 
 const RecentProposals = () => {
     return (
-        <div className='shadow-4xl w-96 flex-1 rounded'>
+        <div className='shadow-4xl w-96 flex-2 rounded'>
             <div className='flex flex-row justify-between bg-[#E1E1E1] shadow-4xl p-5'>
                 <p className='font-bold text-[#242424] text-[18px]'>My Recent Proposals</p>
 
