@@ -19,9 +19,9 @@ const ResponsiveSidebar = () => {
     const [active, setActive] = useState("dashboard");
 
     return (
-        <div className='w-[250px] h-full rounded flex flex-col items-center bgBlack'>
+        <div className='w-[250px] h-full overflow-auto rounded flex flex-col items-center bgBlack'>
 
-            <div className='px-7 w-full overflow-y-scroll'>
+            <div className='px-7 w-full overflow-auto'>
 
                 <div className='pb-7 pt-[3em]'>
                     <Image src={AVlogo} alt="logo" width={151} height={34} />

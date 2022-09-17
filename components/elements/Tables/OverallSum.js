@@ -15,7 +15,7 @@ const OverallSummary = () => {
                 </div>
             </div>
 
-            <div className='pt-2 pl-2 align-center bg-white'>
+            <div className='pt-2 pl-2 h-[100%] align-center bg-white'>
                 {/* <DonutChart
                     colors={["#8D08F5", "#3DBF91", "#1255B3", "#ff6600"]}
                     height={300}

@@ -63,7 +63,7 @@ const Main = () => {
             </div>
 
             {/* Tables */}
-            <div className='flex flex-row flex-wrap justify-between items-stretch gap-5'>
+            <div className='flex flex-row flex-wrap justify-between items-stretch mb-10 gap-5'>
                 <OverallSummary />
                 <MyRecentDesigns />
             </div>
