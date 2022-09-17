@@ -176,9 +176,9 @@ const Navbar = ({ setIsResponsive }) => {
                         onClick={handleClick}
                         className='flex gap-x-2 flex-row rounded-md items-center bg-white px-3 cursor-pointer'
                     >
-                        <Image src={avatar} height={50} width={40} />
+                        <Image alt="logo" src={avatar} height={50} width={40} />
                         <p className=''>Chibuzo</p>
-                        <Image src={arrow} width={8} height={15} />
+                        <Image alt="logo" src={arrow} width={8} height={15} />
                     </div>
 
                     {/* Menu dropdown */}
@@ -211,7 +211,7 @@ const Navbar = ({ setIsResponsive }) => {
                                 <div
                                     onClick={handleClose}
                                     className="w-full hover:bg-[rgba(255,102,0,0.25)] cursor-pointer flex flex-row my-2 px-3 py-2 rounded-md items-center justify-start gap-x-3">
-                                    <Image src={avatar} height={50} width={40} />
+                                    <Image alt="logo" src={avatar} height={50} width={40} />
                                     <div>
                                         <p className="">Chibuzo Michael</p>
                                         <p className="text-sm">System Designer</p>
