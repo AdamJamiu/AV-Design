@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import React from 'react'
-import AVlogo from "../../public/assets/images/AV DESIGNER.svg";
-import dashIcon from "../../public/assets/images/dashboard.svg";
-import clients from "../../public/assets/images/clients.svg";
-import profile from "../../public/assets/images/profile.svg";
-import contacts from "../../public/assets/images/contacts.svg";
-import proposal from "../../public/assets/images/proposal.svg";
-import stack from "../../public/assets/images/stack2.svg";
-import book from "../../public/assets/images/book-open.svg";
-import play from "../../public/assets/images/play.svg";
-import sun from "../../public/assets/images/Sun.svg";
-import dark from "../../public/assets/images/Dark mode.svg";
+import AVlogo from "../../public/assets/AV DESIGNER.svg";
+import dashIcon from "../../public/assets/dashboard.svg";
+import clients from "../../public/assets/clients.svg";
+import profile from "../../public/assets/profile.svg";
+import contacts from "../../public/assets/contacts.svg";
+import proposal from "../../public/assets/proposal.svg";
+import stack from "../../public/assets/stack2.svg";
+import book from "../../public/assets/book-open.svg";
+import play from "../../public/assets/play.svg";
+import sun from "../../public/assets/Sun.svg";
+import dark from "../../public/assets/Dark mode.svg";
 
 import { useState } from 'react';
 
