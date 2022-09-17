@@ -23,9 +23,9 @@ const Main = () => {
                 <div className='flex-1 cursor-pointer hover:scale-110 w-[100%] transition-all hover:transition-all bg-[rgba(242,48,48,0.25)] py-3 px-5 rounded-lg shadow-md'>
                     <div className=' flex flex-row items-center w-full justify-between mb-2'>
                         <p className='font-bold  text-[#0E0E2C]'>My Projects</p>
-                        <Image className='text-[rgba(242,48,48,0.5)]' src={stack} width={30} height={30} />
+                        <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={stack} width={30} height={30} />
                     </div>
-                    <Image className='text-[rgba(242,48,48,0.5)]' src={Group42} width={35} height={35} />
+                    <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={Group42} width={35} height={35} />
 
                 </div>
                 {/* proposal */}
@@ -33,9 +33,9 @@ const Main = () => {
                 <div className='flex-1 w-[100%] transition-all cursor-pointer hover:transition-all hover:scale-110 bg-[rgba(141,8,245,0.25)] py-3 px-5 rounded-lg shadow-md'>
                     <div className='flex flex-row items-center w-full justify-between mb-2'>
                         <p className='font-bold text-[#0E0E2C]'>My Proposals</p>
-                        <Image className='text-[rgba(242,48,48,0.5)]' src={copy} width={30} height={30} />
+                        <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={copy} width={30} height={30} />
                     </div>
-                    <Image className='text-[rgba(242,48,48,0.5)]' src={Group25} width={35} height={35} />
+                    <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={Group25} width={35} height={35} />
 
                 </div>
 
@@ -44,9 +44,9 @@ const Main = () => {
                 <div className='flex-1 w-[100%] hover:scale-110 cursor-pointer transition-all hover:transition-all bg-[rgba(61,191,145,0.25)] py-3 px-5 rounded-lg shadow-md'>
                     <div className='flex flex-row items-center w-full justify-between mb-2'>
                         <p className='font-bold text-[#0E0E2C]'>My Designs</p>
-                        <Image className='text-[rgba(242,48,48,0.5)]' src={archive} width={30} height={30} />
+                        <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={archive} width={30} height={30} />
                     </div>
-                    <Image className='text-[rgba(242,48,48,0.5)]' src={Group15} width={35} height={35} />
+                    <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={Group15} width={35} height={35} />
 
                 </div>
                 {/* My drawings */}
@@ -54,9 +54,9 @@ const Main = () => {
                 <div className='flex-1 w-[100%] hover:scale-110 transition-all cursor-pointer hover:transition-all bg-[rgba(255,102,0,0.25)] py-3 px-5 rounded-lg shadow-md'>
                     <div className='flex flex-row items-center w-full justify-between mb-2'>
                         <p className='font-bold text-[#0E0E2C] '>My Drawings</p>
-                        <Image className='text-[rgba(242,48,48,0.5)]' src={pentool} width={30} height={30} />
+                        <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={pentool} width={30} height={30} />
                     </div>
-                    <Image className='text-[rgba(242,48,48,0.5)]' src={Group28} width={35} height={35} />
+                    <Image alt="logo" className='text-[rgba(242,48,48,0.5)]' src={Group28} width={35} height={35} />
 
                 </div>
 
